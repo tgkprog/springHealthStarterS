@@ -3,6 +3,8 @@
 1. Database(MySql) and tomcat server setup
 Install xammp software in your machine from https://www.apachefriends.org/download.html
 
+Set up password to access db in code/S2nSmsWSDao/src/main/resources/appconfig.properties
+
 2. Open phpmyadmin console in xammp, dump db using import option
 import--> select 1_ddl_script.sql --> go
 import--> select 2_dml_script.sql --> go
@@ -25,7 +27,7 @@ Copping directories from one to another.
 C:\>xcopy /c /e/y /d source_path  destination_path
 
 Example
-C:\>xcopy /c /e/y /d E:\Trimurthulu\MOH\NeevMOHPRO\Sel2inWeb\target\Sel2inWeb C:\apache-tomcat-7.0.57\webapps\ROOT
+C:\>xcopy /c /e/y /d code\Sel2inWeb\target\Sel2inWeb C:\apache-tomcat-7.0.57\webapps\ROOT
 
 
 Test Case for Transaction Roll Back Demo
