@@ -11,7 +11,7 @@ import--> select 2_dml_script.sql --> go
 
 3. set up maven in your system from http://maven.apache.org/download.cgi
 
-4. go to smsWebSend starter project top folder.
+4. Go to smsWebSend starter project top folder.
 run maven command
 >mvn clean install tomcat:run-war-only
 
@@ -19,6 +19,8 @@ run maven command
 mvn clean -- cleans all projects
 mvn install -- compiles and runs test cases and generates jar files 
 mvn tomcat:run-war-only  -- deploys the generated war file into tomcat
+
+5. There are helpful batch programs, read what they do and change paths, before running, Don't uncomment (remove REM) before understanding what the del commands can do
 
 
 
