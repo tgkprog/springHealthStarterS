@@ -1,7 +1,7 @@
 // Mock_Startup  project SetUp
 
 1. Database(MySql) and tomcat server setup
-Install xammp software in your machine from https://www.apachefriends.org/download.html
+Install xammp software in your machine from https://www.apachefriends.org/download.html or other version 
 
 2. Open phpmyadmin console in xammp, dump db using import option
 import--> select 1_ddl_script.sql --> go
@@ -20,7 +20,7 @@ mvn tomcat:run-war-only  -- deploys the generated war file into tomcat
 
 
 
-Copping directories from one to another.
+Copying directories from one to another.
 ------------------------------------------------------
 C:\>xcopy /c /e/y /d source_path  destination_path
 
