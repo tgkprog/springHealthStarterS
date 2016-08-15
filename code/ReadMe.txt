@@ -3,15 +3,13 @@
 1. Database(MySql) and tomcat server setup
 Install xammp software in your machine from https://www.apachefriends.org/download.html
 
-Set up password to access db in code/S2nSmsWSDao/src/main/resources/appconfig.properties
-
 2. Open phpmyadmin console in xammp, dump db using import option
 import--> select 1_ddl_script.sql --> go
 import--> select 2_dml_script.sql --> go
 
 3. set up maven in your system from http://maven.apache.org/download.cgi
 
-4. Go to smsWebSend starter project top folder.
+4. go to smsWebSend starter project top folder.
 run maven command
 >mvn clean install tomcat:run-war-only
 
@@ -20,8 +18,6 @@ mvn clean -- cleans all projects
 mvn install -- compiles and runs test cases and generates jar files 
 mvn tomcat:run-war-only  -- deploys the generated war file into tomcat
 
-5. There are helpful batch programs, read what they do and change paths, before running, Don't uncomment (remove REM) before understanding what the del commands can do
-
 
 
 Copping directories from one to another.
@@ -29,12 +25,14 @@ Copping directories from one to another.
 C:\>xcopy /c /e/y /d source_path  destination_path
 
 Example
-C:\>xcopy /c /e/y /d code\Sel2inWeb\target\Sel2inWeb C:\apache-tomcat-7.0.57\webapps\ROOT
+C:\>xcopy /c /e/y /d E:\Trimurthulu\MOH\NeevMOHPRO\Sel2inWeb\target\Sel2inWeb C:\apache-tomcat-7.0.57\webapps\ROOT
 
 
 Test Case for Transaction Roll Back Demo
 --------------------------------------------------
-AppointmentFacadeTest.testCreateUserAndBookAppointment() written to prove the concept of transaction rollback. With a clean database (similar to the database at step 2 of Mock_Startup  project SetUp) user_1 and appoinment_1 will be created. Since the same appointment is no more available appointment_2 will not be created and user_2 will be rolled back. Any subsequent runs of this test will not create user or appointment because the appointment is no more available.
+AppointmentFacadeTest.testCreateUserAndBookAppointment() written to prove the concept of transaction rollback. With a clean database (similar to the database at step 2 of Mock_Startup  project SetUp) user_1 and appoinment_1 will be created. 
+
+Since the same appointment slot is not available, appointment_2 will not be created for user_2, and will be rolled back. Any subsequent runs of this test will not create user or appointment because the appointment slot is not available.
 
 1. go to smsWebSend starter\Sel2inFacade project top folder.
 run maven command:

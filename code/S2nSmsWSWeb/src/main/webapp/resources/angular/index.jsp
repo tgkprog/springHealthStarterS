@@ -1,7 +1,7 @@
-<%@ taglib uri="/WEB-INF/tld/mohSecurity.tld" prefix="smsWebSend" %>
+<%@ taglib uri="/WEB-INF/tld/appSecurity.tld" prefix="smsWebSend" %>
 <!DOCTYPE html>
  
-<html lang="en" ng-app="mohStarterApp">
+<html lang="en" ng-app="view1App">
 <head>
 	<script>
 		var roles_ = <smsWebSend:roles />;
@@ -76,5 +76,5 @@
 
 
 
-
+<br>lala1
 

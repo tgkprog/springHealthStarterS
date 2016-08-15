@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 /* App Module */
-var app = angular.module('mohStarterApp', [ 'ngRoute', 'ngCookies', 'LoginModule', 'RegistrationModule', 'AdminModule', 'PatientModule',
+var app = angular.module('view1App', [ 'ngRoute', 'ngCookies', 'LoginModule', 'RegistrationModule', 'AdminModule', 'PatientModule',
 		'AppointmentModule', 'InventoryModule', 'PatientRecordModule', 'InventoryServiceModule', 'ui.bootstrap' ]);
 
 app.config([ '$routeProvider', function($routeProvider) {

@@ -1,4 +1,4 @@
-USE `mohStarter`; 
+USE `health1`; 
 
 INSERT INTO `User` 
 	( `Id`, `dob`, `email`, `fname`, `lname`, `mobile`, `mobile_code`, `password`, `rolename`) VALUES 

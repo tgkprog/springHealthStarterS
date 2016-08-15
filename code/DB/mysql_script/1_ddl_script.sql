@@ -10,14 +10,14 @@ SET time_zone = "+00:00";
 
 
 --
--- Database: `mohStarter`
+-- Database: `health1`
 --
 -- Drop might not work in phpmyadmin - run from console or remove disable drop from config
--- Drop data base if exists mohStarter;
+-- Drop data base if exists health1;
 
-CREATE DATABASE IF NOT EXISTS `mohStarter` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `health1` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-USE `mohStarter`;
+USE `health1`;
 
 
 -- --------------------------------------------------------
@@ -295,11 +295,27 @@ CREATE TABLE role_privilege (
 );
 
 CREATE TABLE app_settings (
-  `index_no` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `main_id` varchar(255) DEFAULT NULL,
   `sub_id` varchar(255) DEFAULT NULL,
-  `language` varchar(255) DEFAULT NULL,
-  `param_name` varchar(255) DEFAULT NULL,
-  `param_value` varchar(255) DEFAULT NULL,
-   PRIMARY KEY (index_no)
+  `language` varchar(15) DEFAULT NULL,
+  `param_name` varchar(500) DEFAULT NULL,
+  `param_value` text DEFAULT NULL,
+   PRIMARY KEY (id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+
+
+
+DROP TABLE IF EXISTS `TusharTesttgkprog`;
+
+CREATE TABLE IF NOT EXISTS `TusharTesttgkprog` (
+`Id` int(11) NOT NULL,
+  `language` varchar(15) DEFAULT NULL,
+  `main_id` varchar(255) DEFAULT NULL,
+  `sub_id` varchar(255) DEFAULT NULL,
+  `param_name` varchar(255) DEFAULT NULL,
+  `param_value` text DEFAULT NULL,
+  `comment` text DEFAULT NULL,
+   PRIMARY KEY (Id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+

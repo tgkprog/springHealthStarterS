@@ -24,7 +24,7 @@ public class AppSettingVO implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "index_no")
+	@Column(name = "Id")
 	public int getIndexNo() {
 		return indexNo;
 	}

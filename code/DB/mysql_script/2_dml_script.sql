@@ -1,4 +1,4 @@
-USE `mohStarter`;
+USE `health1`;
 
 
 --
@@ -165,7 +165,7 @@ INSERT INTO `role_privilege` (`role_id`, `privilege_id`) VALUES
 (6, 20);
 
 
-insert into app_settings (index_no,main_id,sub_id,language,param_name,param_value) VALUES
+insert into app_settings (id,main_id,sub_id,language,param_name,param_value) VALUES
 (1, '1','1','English','location','Oman'),
 (2, '1','2','Hindi','location','India'),
 (3, '1','1','English','Res_Root_Absolute','/data/tomcat/'),
