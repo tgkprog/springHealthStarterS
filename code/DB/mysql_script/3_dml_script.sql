@@ -1,4 +1,4 @@
-USE `health1`; 
+USE `health2`; 
 
 INSERT INTO `User` 
 	( `Id`, `dob`, `email`, `fname`, `lname`, `mobile`, `mobile_code`, `password`, `rolename`) VALUES 

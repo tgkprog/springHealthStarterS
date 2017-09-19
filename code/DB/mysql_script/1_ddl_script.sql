@@ -10,14 +10,12 @@ SET time_zone = "+00:00";
 
 
 --
--- Database: `health1`
---
 -- Drop might not work in phpmyadmin - run from console or remove disable drop from config
--- Drop data base if exists health1;
+-- Drop data base if exists health2;
 
-CREATE DATABASE IF NOT EXISTS `health1` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `health2` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-USE `health1`;
+USE `health2`;
 
 
 -- --------------------------------------------------------

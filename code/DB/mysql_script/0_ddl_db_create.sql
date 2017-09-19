@@ -1,4 +1,4 @@
-drop database if exists health1;
+drop database if exists health2;
 
 select 'Db dropped ' as 'Info';
 
