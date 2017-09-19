@@ -1,15 +1,23 @@
-// Mock_Startup  project SetUp
+READ ME
+
+Code is under folder /code
+
+Project Set Up
+============
 
 1. Database(MySql) and tomcat server setup
 Install xammp software in your machine from https://www.apachefriends.org/download.html or other version 
+Or get both to run on local seperately with my sql driver avaiable to tomcat
+Tested on ubuntu, mac and ubuntu
 
-2. Open phpmyadmin console in xammp, dump db using import option
+2. Run following db scripts
+Open phpmyadmin console in xammp, dump db using import option
 import--> select 1_ddl_script.sql --> go
 import--> select 2_dml_script.sql --> go
 
-3. set up maven in your system from http://maven.apache.org/download.cgi
+3. set up maven 3+ in your system from http://maven.apache.org/download.cgi
 
-4. go to smsWebSend starter project top folder.
+4. go to code/smsWebSend starter project top folder.
 run maven command
 >mvn clean install tomcat:run-war-only
 
@@ -18,7 +26,8 @@ mvn clean -- cleans all projects
 mvn install -- compiles and runs test cases and generates jar files 
 mvn tomcat:run-war-only  -- deploys the generated war file into tomcat
 
-
+q.sh is for quick compile without tests 
+> mvn install -Dmaven.test.skip=true
 
 Copying directories from one to another.
 ------------------------------------------------------
@@ -85,4 +94,4 @@ First configure path for tommyHome , java , mysql , mysqlUsername , mysqlUserpas
  	open tab in default browser
 
 script will deploy Sel2inWeb as "/" (inside ROOT directory) and Sel2inRptWeb as "Sel2inRptWeb" inside Tomcat.
- 
+
