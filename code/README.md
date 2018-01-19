@@ -36,6 +36,19 @@ C:\>xcopy /c /e/y /d source_path  destination_path
 Example
 C:\>xcopy /c /e/y /d E:\Trimurthulu\MOH\NeevMOHPRO\Sel2inWeb\target\Sel2inWeb C:\apache-tomcat-7.0.57\webapps\ROOT
 
+Structure
+--------------------
+The project is divided in to sub projects for seperation of concerns.
+We have 
+1. Utils - general java, apach libraries and spring utilities that do not depend on opur code. Reusable across projects. generic or specific to our domain. S2nSmsWSUtils
+2. Entities - just the Pojos and db mapping. S2nSmsWSEntities
+3. Dao - db specific code for CRUD ops. Can have seperate Daos per entity or special classes say for search that are across entities. S2nSmsWSDao
+4. Service layer. Each class talks to one Dao here. Can add caching and txn mgt code here. S2nSmsWSService
+5. Facade here we talk to one or more services. can add caches for computer values (example appointment slots that are not in db due sparse strategy). Here we also change to POJO from entity to DTO, which can have a subset of one or more entities. use populators to convert one DTO to other. S2nSmsWSFacade
+6. Web,  used to expose APIs. Also has exported angular code and a few admin jsps. S2nSmsWSWebDeps and S2nSmsWSWeb
+                                                    
+S2nSmsWSRptEntity, S2nSmsWSRptDao, 	S2nSmsWSRptService, S2nSmsWSRptFacade, S2nSmsWSRptWeb illustrate a way to make the project modular, to split a project into smaller sub projects that can be deployed together or separately as a loosely coupled micro service so different dev teams can work on them. Plus there can be separation of concerns and maintenance.						
+
 
 Test Case for Transaction Roll Back Demo
 --------------------------------------------------
